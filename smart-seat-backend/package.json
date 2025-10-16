@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "wait-on tcp:mysql:3306 && nodemon index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],

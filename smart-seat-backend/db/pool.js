@@ -1,10 +1,11 @@
 const mysql = require('mysql2/promise');
 
 const dbConfig = {
-  host: 'cp3405-tr3-2025-p1t1-mysql-1',
-  user: 'root',
-  password: 'asdfgh123',
-  database: 'smart_seat',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME || 'smart_seat',
+  port: process.env.DB_PORT || 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
