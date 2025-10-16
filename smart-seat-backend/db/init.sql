@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS smart_seat;
+USE smart_seat;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('student', 'teacher', 'admin') NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT IGNORE INTO users (email, password, role) 
+VALUES ('test@example.com', '$2b$10$VKYJ8L6jZ9lL8H5QK8Qj8eGf9Gf9Gf9Gf9Gf9Gf9Gf9Gf9Gf9Gf', 'student');

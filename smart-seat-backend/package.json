@@ -1,0 +1,21 @@
+{
+  "name": "smart-seat-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "wait-on tcp:mysql:3306 && nodemon index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.1"
+  },
+  "devDependencies": {
+    "wait-on": "^9.0.1"
+  }
+}
